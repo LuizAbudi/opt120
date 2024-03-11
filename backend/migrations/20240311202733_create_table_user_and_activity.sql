@@ -21,8 +21,8 @@ CREATE TABLE user_activity (
     score FLOAT NOT NULL,
 
     PRIMARY KEY (user_id, activity_id),
-    FOREIGN KEY (user_id) REFERENCES user(id),
-    FOREIGN KEY (activity_id) REFERENCES activity(id),
+    CONSTRAINT user_fk FOREIGN KEY (user_id) REFERENCES user(id),
+    CONSTRAINT activity_fk FOREIGN KEY (activity_id) REFERENCES activity(id),
 )
 -- +goose StatementEnd
 
